@@ -1,1 +1,68 @@
+/**
+ * Sesion 1 
+ * 6:48pm MXN HOUR
+ * Miércoles 17 de Marzo del 2021
+ * ===============================
+ * Nombre: Como crear una Variable
+ * Descripcion: En esta sesion aprenderaz a como crear variables 
+ * de 2 formas, usando $this->variable o simplemente $variable
+ */
 
+=======================================
+
+Como instalar Pocketmine (Ubuntu/Linux/MacOS)
+
+> wget -q -O - https://get.pmmp.io | bash -s -
+
+En caso de que el Usuario sea root 
+
+> wget -q -O - https://get.pmmp.io | bash -s - -r flag
+
+=======================================
+
+ALTO SI NO SABES PHP O ALMENOS SABRER CREAR CARPETAS ESTE TUTORIAL NO TE SERVIRA DE NADA
+
+=======================================
+
+En tu archivo principal pondrán lo suguiente
+
+TIP: NO SE TE OLVIDE EL: use pocketmine\plugin\PluginBase;
+TIP: NO SE TE OLVIDE EL: use pocketmine\utils\TextFormat;
+
+============================================
+
+FORMA 1:
+   
+ class (Archivo) extends PluginBase {
+  
+   private $color = "§b"; Tu color de formato
+ 
+   public function onEnable() {
+     $this->getLogger()->info($this->color . "Mensaje");
+  } 
+
+   public function onDisable() {
+     $this->getLogger()->info($this->color . "Mensaje);
+  }
+}
+
+============================================
+
+FORMA 2:
+
+class (Archivo) extends PluginBase {
+ 
+   public function onEnable() {
+   $color = "§a"; Tu color de formato
+     $this->getLogger()->info($color . "Mensaje");
+  } 
+
+   public function onDisable() {
+   $color = "§c"; Tu color de formato
+     $this->getLogger()->info($color . "Mensaje);
+  }
+}
+
+============================================
+
+Aqui acabara la sesion 1 la sesion 2 estara disponible pronto, esperala 👍
