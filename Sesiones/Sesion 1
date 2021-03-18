@@ -3,9 +3,7 @@
  * 6:48pm MXN HOUR
  * Miércoles 17 de Marzo del 2021
  * ===============================
- * Nombre: Como crear una Variable
- * Descripcion: En esta sesion aprenderaz a como crear variables 
- * de 2 formas, usando $this->variable o simplemente $variable
+ * Nombre: Como crear una variable de tipo string
  */
 
 =======================================
@@ -29,42 +27,26 @@ ALTO SI NO SABES PHP O ALMENOS NO SABRER CREAR CARPETAS ESTE TUTORIAL NO TE SERV
 En tu archivo principal pondrán lo suguiente
 
 TIP: NO SE TE OLVIDE EL: use pocketmine\plugin\PluginBase;
-TIP: NO SE TE OLVIDE EL: use pocketmine\utils\TextFormat;
+TIP: NO SE TE OLVIDE EL: use pocketmine\utils\TextFormat as C;
 
 ============================================
 
-FORMA 1:
+EJEMPLO:
    
- class (Archivo) extends PluginBase {
-  
-   private $color = "§b"; Tu color de formato
- 
-   public function onEnable() {
-     $this->getLogger()->info($this->color . "Mensaje");
+ class (Clase) extends PluginBase {
+
+   AQUI ASIGNAMOS A LA VARIABLE $message UNA CADENA DE TEXTO
+   QUE CONTIENE UN TEXTO
+
+     static $message = "Mensaje";
+
+   public function onEnable(): void{
+     $this->getLogger()->info(C::GREEN.self::$message);
   } 
 
-   public function onDisable() {
-     $this->getLogger()->info($this->color . "Mensaje);
+   public function onDisable(): void{
+     $this->getLogger()->info(C::RED.self::$message);
   }
 }
-
-============================================
-
-FORMA 2:
-
-class (Archivo) extends PluginBase {
- 
-   public function onEnable() {
-   $color = "§a"; Tu color de formato
-     $this->getLogger()->info($color . "Mensaje");
-  } 
-
-   public function onDisable() {
-   $color = "§c"; Tu color de formato
-     $this->getLogger()->info($color . "Mensaje);
-  }
-}
-
-============================================
 
 Aqui acabara la sesion 1 la sesion 2 estara disponible pronto, esperala 👍
