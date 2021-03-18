@@ -18,6 +18,8 @@ En caso de que el Usuario sea root
 
 > wget -q -O - https://get.pmmp.io | bash -s - -r flag
 
+En cambio si lo usas en Host no te hara falta esto ya que ya viene instalado
+
 =======================================
 
 ALTO SI NO SABES PHP O ALMENOS NO SABRER CREAR CARPETAS ESTE TUTORIAL NO TE SERVIRA DE NADA
